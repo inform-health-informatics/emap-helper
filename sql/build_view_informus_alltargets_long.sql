@@ -1,3 +1,6 @@
+-- Steve Harris
+-- created Dec 2020
+-- convert targets to long
 
 DROP VIEW IF EXISTS informus.alltargets_long;
 

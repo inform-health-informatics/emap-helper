@@ -1,3 +1,10 @@
+-- Steve Harris
+-- Created 2021-01-26
+-- produce a realtime view of oxygen demand across the tower
+-- returns a week's worth of data (much more and slows down too much)
+
+-- TODO
+-- todo: finesse the calculation to include respiratory rate and machine type
 
 SET search_path to star_a, public;
 -- this moves all operations into memory

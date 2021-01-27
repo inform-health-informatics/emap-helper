@@ -1,3 +1,8 @@
+-- Steve Harris
+-- Create a simple view of patients who have received NIV
+-- returns a table of identifiers for other views to join against
+
+-- LOG
 -- 2021-01-22
 -- V simple view that produces the foreign keys need to define patients who have received NIV
 
@@ -7,7 +12,6 @@
 -- would be good to wrap all this up in a single place
 
 SET search_path to star_a, public;
--- this moves all operations into memory
 
 DROP VIEW IF EXISTS flow.niv_filter;
 CREATE VIEW flow.niv_filter AS
@@ -50,4 +54,4 @@ LEFT JOIN star_a.mrn ON mrn_to_live.live_mrn_id = mrn.mrn_id
 
 ;
 
-EXPLAIN ANALYZE SELECT * FROM flow.cc_filter;
+EXPLAIN ANALYZE SELECT * FROM flow.niv_filter;

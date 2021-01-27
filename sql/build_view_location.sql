@@ -1,8 +1,12 @@
--- 25 Nov
+-- Steve Harris
+-- Created 25 Nov 2020
 -- Build materialized view for locations
 -- this will not be useful if the list of locations ever updates without remembering to update the materialised view
 
-SET search_path to star_test, public;
+-- LOG
+-- 2021-01-27 switched to star_a
+
+SET search_path to star_a, public;
 
 DROP VIEW IF EXISTS flow.location;
 CREATE VIEW flow.location AS
@@ -61,7 +65,7 @@ CREATE VIEW flow.location AS
             WHEN location_string ~ '.*(SURGERY|THR|PROC|ENDO|TREAT|ANGI).*|.+(?<!CHA)IN?R\^.*' then 'procedure' 
             WHEN location_string ~ '.*XR.*|.*MRI.*|.+CT\^.*|.*SCANNER.*' then 'imaging' 
             END AS bed_type
-    FROM star_test.location
+    FROM star_a.location
 ORDER BY location_string ASC
 ;
 EXPLAIN ANALYZE SELECT * FROM flow.location;

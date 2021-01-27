@@ -1,10 +1,15 @@
+-- Steve Harris
+-- Created 23 Nov 2020
+
+-- LOG
 -- 23 Nov
 -- I wish to be able to report occupancy in realtime; suggesting that by
 -- running cumulative sum within a ward and treating an admission time as a +1
 -- and a discharge time as a -1 should do it
 -- ---------------------------------
 -- now try and put this all together
-SET search_path to star_test, public;
+
+SET search_path to star_a, public;
 
 DROP VIEW IF EXISTS flow.occupancy;
 
@@ -15,7 +20,7 @@ SELECT
      location_id
     ,location_string
     ,SPLIT_PART(location_string,'^',1) ward
-FROM star_test.location
+FROM star_a.location
 WHERE SPLIT_PART(location_string,'^',3) != 'null'
 ),
 wide AS (
@@ -33,9 +38,9 @@ SELECT
         PARTITION BY vd.hospital_visit_id
         ORDER BY vd.admission_time ASC
         ) ward_lag1
-FROM star_test.location_visit vd
+FROM star_a.location_visit vd
 JOIN loc ON vd.location_id = loc.location_id
-JOIN star_test.hospital_visit v ON vd.hospital_visit_id = v.hospital_visit_id
+JOIN star_a.hospital_visit v ON vd.hospital_visit_id = v.hospital_visit_id
 ),
 long AS (
 SELECT 
@@ -77,10 +82,6 @@ SELECT
     , occ_now.n - sum(census) OVER (PARTITION BY long.ward ORDER BY ts DESC) AS occupancy
 FROM long
 JOIN occ_now ON long.ward = occ_now.ward
---WHERE long.ward = 'T03'
---WHERE
-    --wide.hospital_visit_id = 566012293 -- GC
---    wide.hospital_visit_id = 558156197 -- KB
 --LIMIT 5
 ;
 

@@ -6,7 +6,7 @@
 -- runs 12 months worth of data
 
 
-SET search_path to star_test, public;
+SET search_path to star_a, public;
 -- this moves all operations into memory
 SET work_mem='256MB';
 
@@ -71,7 +71,7 @@ loc_all AS (
             WHEN location_string ~ '.*(SURGERY|THR|PROC|ENDO|TREAT|ANGI).*|.+(?<!CHA)IN?R\^.*' then 'procedure' 
             WHEN location_string ~ '.*XR.*|.*MRI.*|.+CT\^.*|.*SCANNER.*' then 'imaging' 
             END AS bed_type
-    FROM star_test.location
+    FROM star_a.location
 ),
 loc AS (
     SELECT * FROM loc_all WHERE census = true
@@ -87,9 +87,9 @@ mvp AS (
         ,v.patient_class
         ,v.admission_time hosp_in
         ,v.discharge_time hosp_dc
-    FROM star_test.hospital_visit v 
-        JOIN star_test.core_demographic p ON v.mrn_id = p.mrn_id
-        JOIN star_test.mrn m ON p.mrn_id = m.mrn_id
+    FROM star_a.hospital_visit v 
+        JOIN star_a.core_demographic p ON v.mrn_id = p.mrn_id
+        JOIN star_a.mrn m ON p.mrn_id = m.mrn_id
     WHERE
         -- not Winpath since we're only looking at movement
         v.patient_class = 'INPATIENT'
@@ -124,7 +124,7 @@ WIDE AS (
         -- roundtrips in and out of exactly the same location 
         ,CASE WHEN LAG(vd.location_id,2) OVER ( PARTITION BY vd.hospital_visit_id ORDER BY vd.admission_time ASC) = vd.location_id THEN true END AS roundtrip_lag2
         ,CASE WHEN LEAD(vd.location_id,2) OVER ( PARTITION BY vd.hospital_visit_id ORDER BY vd.admission_time ASC) = vd.location_id THEN true END AS roundtrip_lead2
-    FROM star_test.location_visit vd
+    FROM star_a.location_visit vd
         JOIN mvp ON vd.hospital_visit_id = mvp.hospital_visit_id
         JOIN loc ON vd.location_id = loc.location_id
         
@@ -228,4 +228,5 @@ FROM LONG
 LEFT JOIN OCC_NOW ON long.ward = OCC_NOW.ward
 LEFT JOIN cc_now ON long.critical_care = cc_now.critical_care
 ;
+RESET work_mem;
 select count(*) from flow.census_cc ;
