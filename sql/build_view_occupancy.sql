@@ -2,6 +2,7 @@
 -- Created 23 Nov 2020
 
 -- LOG
+
 -- 23 Nov
 -- I wish to be able to report occupancy in realtime; suggesting that by
 -- running cumulative sum within a ward and treating an admission time as a +1
@@ -9,11 +10,20 @@
 -- ---------------------------------
 -- now try and put this all together
 
-SET search_path to star_a, public;
+-- 2021-05-21
+-- corrected from star_a to star
+-- changed target schema to icu_audit
 
-DROP VIEW IF EXISTS flow.occupancy;
 
-CREATE OR REPLACE VIEW flow.occupancy AS
+
+
+
+
+SET search_path to star, public;
+
+DROP VIEW IF EXISTS icu_audit.occupancy;
+
+CREATE OR REPLACE VIEW icu_audit.occupancy AS
 WITH
 loc AS (
 SELECT
