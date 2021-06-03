@@ -5,7 +5,7 @@
   m.mrn,
   lr.result_last_modified_time,
   ltd.test_lab_code,
-  lr.value_as_texts
+  lr.value_as_text
   FROM star.lab_result lr
 INNER JOIN star.lab_test_definition ltd
   ON ltd.lab_test_definition_id = lr.lab_test_definition_id
