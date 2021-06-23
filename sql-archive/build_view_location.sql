@@ -4,9 +4,10 @@
 -- this will not be useful if the list of locations ever updates without remembering to update the materialised view
 
 -- LOG
+-- 2021-06-22 switched to star
 -- 2021-01-27 switched to star_a
 
-SET search_path to star_a, public;
+SET search_path to star, public;
 
 DROP VIEW IF EXISTS flow.location;
 CREATE VIEW flow.location AS
@@ -65,7 +66,7 @@ CREATE VIEW flow.location AS
             WHEN location_string ~ '.*(SURGERY|THR|PROC|ENDO|TREAT|ANGI).*|.+(?<!CHA)IN?R\^.*' then 'procedure' 
             WHEN location_string ~ '.*XR.*|.*MRI.*|.+CT\^.*|.*SCANNER.*' then 'imaging' 
             END AS bed_type
-    FROM star_a.location
+    FROM star.location
 ORDER BY location_string ASC
 ;
 EXPLAIN ANALYZE SELECT * FROM flow.location;

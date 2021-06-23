@@ -42,7 +42,7 @@ RIGHT JOIN
   ids
   ON vd.hospital_visit_id = ids.hospital_visit_id
 LEFT JOIN
-  star.location lo
+  star.location loc
   ON vd.location_id = loc.location_id
 WHERE vd.discharge_time IS NULL
 )
