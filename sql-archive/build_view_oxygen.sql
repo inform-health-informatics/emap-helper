@@ -1,12 +1,5 @@
--- Steve Harris
--- Created 2021-01-26
--- produce a realtime view of oxygen demand across the tower
--- returns a week's worth of data (much more and slows down too much)
 
--- TODO
--- todo: finesse the calculation to include respiratory rate and machine type
-
-SET search_path to star_a, public;
+SET search_path to star, public;
 -- this moves all operations into memory
 SET work_mem='256MB';
 
@@ -33,20 +26,20 @@ FROM
 		  hospital_visit_id
 		, observation_datetime
 		, CASE 
-			WHEN visit_observation_type_id = 2281790312 THEN 'o2_lmin'
-			WHEN visit_observation_type_id = 2281789816 THEN 'o2_fi'
-		 	WHEN visit_observation_type_id = 2281790343 THEN 'o2_device'
+			WHEN visit_observation_type_id = 57956774 THEN 'o2_lmin'
+			WHEN visit_observation_type_id = 57956162 THEN 'o2_fi'
+		 	WHEN visit_observation_type_id = 57956818 THEN 'o2_device'
 			END AS o2_obs
 		, CASE 
-			WHEN visit_observation_type_id = 2281790312 THEN value_as_real::TEXT
-			WHEN visit_observation_type_id = 2281789816 THEN value_as_real::TEXT
-			WHEN visit_observation_type_id = 2281790343 THEN value_as_text
+			WHEN visit_observation_type_id = 57956774 THEN value_as_real::TEXT
+			WHEN visit_observation_type_id = 57956162 THEN value_as_real::TEXT
+			WHEN visit_observation_type_id = 57956818 THEN value_as_text
 			END AS o2_val
-		FROM star_a.visit_observation
+		FROM star.visit_observation
 		WHERE visit_observation_type_id IN (
-			  2281790312
-			, 2281789816
-			, 2281790343
+			  57956774
+			, 57956162
+			, 57956818
 			) -- flow rate / fio2 / device
 			AND
 			observation_datetime > NOW() - '7 DAYS'::INTERVAL			
@@ -95,12 +88,12 @@ o2i AS (
 				, vd.discharge_time
 				, loc.location_string
 			FROM
-				star_a.location_visit vd
+				star.location_visit vd
 			INNER JOIN 
 			 	(SELECT 
 			 		  location_id
 			 		, location_string
-				 FROM star_a.location) loc			  
+				 FROM star.location) loc			  
 				 ON vd.location_id = loc.location_id
 			WHERE 
 			 	wide.hospital_visit_id = vd.hospital_visit_id
