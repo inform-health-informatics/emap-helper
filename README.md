@@ -11,5 +11,6 @@ There is also a JupyterBook under production at `./book`. The main branch for wo
 Advice on working with JupyterBook is available [here](https://jupyterbook.org/intro.html).
 
 ## Conventions
+- With great power ... pushing from UCLH machines risks leaking data so .gitattributes is set to remove all notebook outputs. If you want to show this work, then you must manually copy into a markdown cell.
 - Use feature branching with your username as prefix, e.g. *steve/oxygen* and create PRs against `dev`
 - Once code has matured, as decided by consensus, it will move to `stable`
