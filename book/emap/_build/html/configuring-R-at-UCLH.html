@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content in Jupyter Book &#8212; EMAP at UCLH</title>
+    <title>Configuring R at UCLH &#8212; EMAP at UCLH</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
@@ -98,8 +99,8 @@
    Content with notebooks
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="configuring-R-at-UCLH.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Configuring R at UCLH
   </a>
  </li>
@@ -144,7 +145,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/content.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/configuring-R-at-UCLH.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -164,7 +165,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/docsteveharris/EMAP at UCLH/issues/new?title=Issue%20on%20page%20%2Fcontent.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/docsteveharris/EMAP at UCLH/issues/new?title=Issue%20on%20page%20%2Fconfiguring-R-at-UCLH.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -185,6 +186,26 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-renviron-file">
+   A .Renviron file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#proxies-for-connecting-to-the-internet">
+     Proxies for connecting to the internet
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -193,11 +214,23 @@
         
               <div>
                 
-  <div class="section" id="content-in-jupyter-book">
-<h1>Content in Jupyter Book<a class="headerlink" href="#content-in-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>There are many ways to write content in Jupyter Book. This short section
-covers a few tips for how to do so.</p>
-<div class="toctree-wrapper compound">
+  <div class="section" id="configuring-r-at-uclh">
+<h1>Configuring R at UCLH<a class="headerlink" href="#configuring-r-at-uclh" title="Permalink to this headline">¶</a></h1>
+<p>Tips and tricks if this is your first time working with R on the Datascience Desktop.</p>
+<div class="section" id="a-renviron-file">
+<h2>A .Renviron file<a class="headerlink" href="#a-renviron-file" title="Permalink to this headline">¶</a></h2>
+<p>You will need to create a <code class="docutils literal notranslate"><span class="pre">.Renviron</span></code> file in your home directory.</p>
+<p>An example file is available [here](TODO: add gist). Within the file, you will need the following</p>
+<div class="section" id="proxies-for-connecting-to-the-internet">
+<h3>Proxies for connecting to the internet<a class="headerlink" href="#proxies-for-connecting-to-the-internet" title="Permalink to this headline">¶</a></h3>
+<p>This is not needed for packages installed from CRAN but it is needed for github installs etc.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">http_proxy</span><span class="o">=</span>http://www-cache-n.xuclh.nhs.uk:3128/
+<span class="nv">https_proxy</span><span class="o">=</span>http://www-cache-n.xuclh.nhs.uk:3128/
+<span class="nv">HTTP_PROXY</span><span class="o">=</span>http://www-cache-n.xuclh.nhs.uk:3128/
+<span class="nv">HTTPS_PROXY</span><span class="o">=</span>http://www-cache-n.xuclh.nhs.uk:3128/
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -226,6 +259,7 @@ covers a few tips for how to do so.</p>
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Content with notebooks</a>
 
         </div>
         

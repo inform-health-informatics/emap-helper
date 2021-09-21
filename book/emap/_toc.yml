@@ -1,11 +1,10 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
-format: jb-article
+format: jb-book
 root: intro
-sections:
-- file: content
-  sections:
-  - file: markdown
-  - file: notebooks
-  - file: configuring-R-at-UCLH
+chapters:
+- file: markdown
+- file: notebooks
+- file: configuring-R-at-UCLH
+
