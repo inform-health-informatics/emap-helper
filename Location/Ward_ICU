@@ -1,0 +1,15 @@
+SELECT  
+SPLIT_PART(loc.location_string,'^',1) AS spilt, location_string,
+  CASE 
+  WHEN SPLIT_PART(loc.location_string,'^',1)  ~ '^(T03|WSCC|SINQ|MINQ|P03CV|T07CV)' THEN TRUE
+  END AS Is_ICU,
+  CASE 
+  WHEN SPLIT_PART(loc.location_string,'^',1)  ~ '^(T10S|T13N|T06H|T09N|T11|T09N|T09S|T11S|T14N|T06G|T12N|T08S|T13S|T07S|T08S|T16S|T14S|T12S|T16N|T12S|T13S|T16N|T08N|T13S|T10O|T07|T10MZ|WST4|)' THEN TRUE
+  END AS ward,
+    loc_vis.admission_time, 
+    loc_vis.discharge_time,
+    loc_vis.hospital_visit_id,
+    loc_vis.location_visit_id
+FROM star.location_visit AS loc_vis
+  JOIN star.location AS loc
+ON loc.location_id = loc_vis.location_id ;
