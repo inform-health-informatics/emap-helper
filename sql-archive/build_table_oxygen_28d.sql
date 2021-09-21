@@ -16,8 +16,9 @@ create aggregate flow.locf(float) (
   stype = float
 );
 
-DROP VIEW IF EXISTS flow.oxygen;
-CREATE VIEW flow.oxygen AS
+DROP VIEW IF EXISTS flow.oxygen_28d;
+DROP TABLE IF EXISTS flow.oxygen_28d;
+CREATE TABLE flow.oxygen_28d AS
 WITH wide AS (SELECT 
 * 
 FROM 
@@ -42,7 +43,7 @@ FROM
 			, 57956818
 			) -- flow rate / fio2 / device
 			AND
-			observation_datetime > NOW() - '7 DAYS'::INTERVAL			
+			observation_datetime > NOW() - '28 DAYS'::INTERVAL			
 		ORDER BY 2,1
 	$$
 	, $$VALUES (
@@ -118,7 +119,7 @@ grid AS (
 	SELECT 
  		DATE_TRUNC('hour', obs_dt) obs_dt
 	FROM GENERATE_SERIES(
-		  NOW() - '7 DAYS'::INTERVAL
+		  NOW() - '28 DAYS'::INTERVAL
 		, NOW()
 		, '1 HOUR'::INTERVAL) obs_dt
 ),
@@ -162,4 +163,4 @@ WHERE o2_locf IS NOT NULL
 ;
 RESET work_mem;
 ;
-SELECT * FROM flow.oxygen LIMIT 3;
+SELECT * FROM flow.oxygen_28d LIMIT 3;
