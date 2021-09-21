@@ -1,4 +1,4 @@
-﻿-- Example script showing how to work with observations
+-- Example script showing how to work with observations
 
 -- V simple view that finds recent observations 
 -- for current inpatients in the last few minutes

@@ -7,4 +7,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: configuring-R-at-UCLH
+- file: connect-to-star
 

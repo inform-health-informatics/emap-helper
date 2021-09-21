@@ -1,0 +1,19 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# secret
+secret*
+
+# scratches
+scratch.ipynb
+
+# caches
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache
+.hypothesis
+.pytest_cache
+
+# core dumps
+core.*

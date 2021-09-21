@@ -1,4 +1,4 @@
-﻿-- Example script showing how to work with labs
+-- Example script showing how to work with labs
 
 -- Let's go looking for patients with possible septic shock 
 -- defined by high blood lactate (measured near patient machines)
@@ -21,6 +21,6 @@ WHERE
 -- just blood lactate
 m.lab_test_definition_id = 141462274
 AND
--- in the last 12 hours
-m.result_last_modified_time > NOW() - '3 HOURS'::INTERVAL	
+-- in the last 3 hours
+m.result_last_modified_time > NOW() - '3 HOURS'::INTERVAL
 ORDER BY m.result_last_modified_time DESC
