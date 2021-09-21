@@ -8,3 +8,4 @@ sections:
   sections:
   - file: markdown
   - file: notebooks
+  - file: configuring-R-at-UCLH
