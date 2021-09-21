@@ -1,0 +1,25 @@
+  SELECT
+  lo.order_datetime AS order_datetime,
+  lo.request_datetime AS request_datetime,
+  lo.hospital_visit_id,
+  live_mrn.mrn,
+  lr.result_last_modified_time,
+  ltd.test_lab_code,
+  lr.value_as_text
+  FROM star.lab_result lr
+INNER JOIN star.lab_test_definition ltd
+  ON ltd.lab_test_definition_id = lr.lab_test_definition_id
+  AND ltd.test_lab_code LIKE '%COV%'
+INNER JOIN star.lab_order lo
+  ON lo.lab_order_id = lr.lab_order_id
+INNER JOIN star.hospital_visit hv
+  ON hv.hospital_visit_id = lo.hospital_visit_id
+-- original MRN that may or may not be live 
+INNER JOIN star.mrn original_mrn
+  ON m.mrn_id = hv.mrn_id;
+-- get mrn to live mapping 
+INNER JOIN star.mrn_to_live mtl 
+  ON original_mrn.mrn_id = mtl.mrn_id 
+-- get live mrn 
+INNER JOIN star.mrn live_mrn 
+  ON mtl.live_mrn_id = live_mrn.mrn_id 
