@@ -4,8 +4,10 @@
 format: jb-book
 root: intro
 chapters:
+- file: 00_how-to-use-this-guide
+- file: 10_EMAP_quick_tour
 - file: markdown
 - file: notebooks
+- file: working_with_emap_star
 - file: configuring-R-at-UCLH
-- file: connect-to-star
 
