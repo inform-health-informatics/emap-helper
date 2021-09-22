@@ -7,4 +7,6 @@ Interactive examples
 - then start Jupyter at the top level of the directory
 - the notebooks should then just run
 
+That's it for now.
+
 
