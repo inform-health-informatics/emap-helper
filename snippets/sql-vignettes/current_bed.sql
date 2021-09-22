@@ -1,4 +1,4 @@
-﻿-- Example script 
+-- Example script 
 -- to pick out patients currently in A&E resus or majors
 
 SELECT

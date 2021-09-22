@@ -3,9 +3,11 @@
 
 # secret
 secret*
+.env
 
 # scratches
 scratch.ipynb
+labbooks/*
 
 # caches
 __pycache__/
