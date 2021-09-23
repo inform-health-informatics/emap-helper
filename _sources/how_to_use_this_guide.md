@@ -1,3 +1,5 @@
+# How to use this guide
+
 Read through the material on the [website](https://inform-health-informatics.github.io/emap-helper/intro.html)
 
 Interactive examples
