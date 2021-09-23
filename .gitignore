@@ -7,9 +7,11 @@ secret*
 
 # scratches
 scratch.ipynb
+Untitled.ipynb
 labbooks/*
 
 # caches
+*.swp
 __pycache__/
 *.py[cod]
 *$py.class
