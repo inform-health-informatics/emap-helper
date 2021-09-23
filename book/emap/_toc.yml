@@ -3,11 +3,19 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: how_to_use_this_guide
-- file: EMAP_quick_tour
-- file: markdown
-- file: notebooks
-- file: working_with_emap_star
-- file: configuring-R-at-UCLH
+parts:
+    - caption: EMAP for beginners
+      chapters:
+      - file: 01-emap-4-beginners/how_to_use_this_guide
+      - file: 01-emap-4-beginners/EMAP_quick_tour
+      - file: 01-emap-4-beginners/uclh-working-with-star
+    - caption: Using JupyterBook
+      chapters:
+      - file: 90-using-jupyter-book/content
+      - file: 90-using-jupyter-book/markdown
+      - file: 90-using-jupyter-book/notebooks
+    - caption: Appendices
+      chapters:
+      - file: 95-Appendices/configuring-R-at-UCLH
+
 

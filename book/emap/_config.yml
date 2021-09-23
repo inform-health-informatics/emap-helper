@@ -13,7 +13,10 @@ logo                        : logo.png  # A path to the book logo
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  exclude_patterns:
+    - 'uclh-*'
+    - '*-uclh'
+  execute_notebooks: auto
 
 # Define the name of the latex output file for PDF builds
 latex:
