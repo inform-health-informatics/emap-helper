@@ -19,3 +19,6 @@ __pycache__/
 
 # core dumps
 core.*
+
+# Mac debris
+.DS_Store
