@@ -1,4 +1,4 @@
-﻿-- Example script 3 of 3
+-- Example script 3 of 3
 
 -- 1. Simply pull hospital visits 
 -- 2. Add in hospital numbers (MRN) and handle patient merges 
