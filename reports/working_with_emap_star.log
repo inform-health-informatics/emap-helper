@@ -29,7 +29,7 @@ from utils.setup import load_env_vars
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1937/912949105.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_1890/912949105.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      6[0m [0;32mfrom[0m [0mpathlib[0m [0;32mimport[0m [0mPath[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      7[0m [0;32mfrom[0m [0msqlalchemy[0m [0;32mimport[0m [0mcreate_engine[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 8[0;31m [0;32mfrom[0m [0mutils[0m[0;34m.[0m[0msetup[0m [0;32mimport[0m [0mload_env_vars[0m[0;34m[0m[0;34m[0m[0m
