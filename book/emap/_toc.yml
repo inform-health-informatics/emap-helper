@@ -16,6 +16,7 @@ parts:
       - file: 90-using-jupyter-book/notebooks
     - caption: Appendices
       chapters:
+      - file: 95-Appendices/using-superset
       - file: 95-Appendices/configuring-R-at-UCLH
 
 
