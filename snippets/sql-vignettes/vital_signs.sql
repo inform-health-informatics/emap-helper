@@ -34,7 +34,7 @@ FROM
 -- observation look-up
 LEFT JOIN
   star.visit_observation_type ot
-  on ob.visit_observation_type_id = ot.visit_observation_type
+  on ob.visit_observation_type_id = ot.visit_observation_type_id
 
 WHERE
 ob.observation_datetime > NOW() - '5 MINS'::INTERVAL	
