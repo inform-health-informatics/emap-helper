@@ -14,3 +14,6 @@ Advice on working with JupyterBook is available [here](https://jupyterbook.org/i
 - With great power ... pushing from UCLH machines risks leaking data so .gitattributes is set to remove all notebook outputs. If you want to show this work, then you must manually copy into a markdown cell.
 - Use feature branching with your username as prefix, e.g. *steve/oxygen* and create PRs against `dev`
 - Once code has matured, as decided by consensus, it will move to `stable`
+
+## Notes
+- top level directory has a notebooks subdirectory for all Jupyter Notebooks _but_ then sym link the note books into the 'book' directory and the appropriate chapter

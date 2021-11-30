@@ -9,6 +9,7 @@ secret*
 scratch.ipynb
 Untitled.ipynb
 labbooks/*
+tmp/*
 
 # caches
 *.swp
@@ -21,6 +22,9 @@ __pycache__/
 
 # core dumps
 core.*
+
+# Text editors and IDEs
+*.sublime-*
 
 # Mac debris
 .DS_Store
