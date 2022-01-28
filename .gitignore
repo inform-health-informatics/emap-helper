@@ -1,0 +1,30 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# secret
+secret*
+.env
+
+# scratches
+scratch.ipynb
+Untitled.ipynb
+labbooks/*
+tmp/*
+
+# caches
+*.swp
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache
+.hypothesis
+.pytest_cache
+
+# core dumps
+core.*
+
+# Text editors and IDEs
+*.sublime-*
+
+# Mac debris
+.DS_Store
