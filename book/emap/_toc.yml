@@ -11,8 +11,6 @@ parts:
       - file: 01-emap-4-beginners/uclh-working-with-star
     - caption: FlowEHR
       chapters:
-      - file: 20-flowehr/HyMind-Lab-example
-      - file: 20-flowehr/HyMind-ML-example
       - file: 20-flowehr/vignette_0__README
       - file: 20-flowehr/vignette_0_intro
       - file: 20-flowehr/vignette_1_training_set
