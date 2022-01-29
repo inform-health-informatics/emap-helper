@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi (Hy?) there… &#8212; HYLODE</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Vignette - end-to-end exemplar" href="vignette_0_intro.html" />
+    <link rel="prev" title="Imports" href="HyMind-ML-example.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">HYLODE</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  EMAP for beginners
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-emap-4-beginners/how_to_use_this_guide.html">
+   How to use this guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-emap-4-beginners/EMAP_quick_tour.html">
+   EMAP quick tour
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-emap-4-beginners/uclh-working-with-star.html">
+   Working with EMAP star
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FlowEHR
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HyMind-Lab-example.html">
+   HyMind Lab Example
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HyMind-ML-example.html">
+   Imports
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Hi
+   <em>
+    (Hy?)
+   </em>
+   there…
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vignette_0_intro.html">
+   Vignette - end-to-end exemplar
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vignette_1_training_set.html">
+   Vignette - HyCastle, the lens and building a training set
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vignette_2_modelling.html">
+   Vignette - a Modelling Workflow
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Using JupyterBook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../90-using-jupyter-book/content.html">
+   Content in Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../90-using-jupyter-book/markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../90-using-jupyter-book/notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../95-Appendices/using-superset.html">
+   Superset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../95-Appendices/configuring-R-at-UCLH.html">
+   Configuring R at UCLH
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/20-flowehr/vignette_0__README.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://hylode.github.io/emap-helper/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://hylode.github.io/emap-helper/intro.html/issues/new?title=Issue%20on%20page%20%2F20-flowehr/vignette_0__README.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Hi
+   <em>
+    (Hy?)
+   </em>
+   there…
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-to-the-ml4h-researcher">
+   Case to the ML4H researcher…
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-notebooks">
+   The notebooks…
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Hi (Hy?) there…</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Hi
+   <em>
+    (Hy?)
+   </em>
+   there…
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-to-the-ml4h-researcher">
+   Case to the ML4H researcher…
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-notebooks">
+   The notebooks…
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="hi-hy-there">
+<h1>Hi <em>(Hy?)</em> there…<a class="headerlink" href="#hi-hy-there" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Hylode platform. Thank you for making it this far.</p>
+<p>Over the next four notebooks, we hope to bring you from zero to sixty on why we developed the platform and how to use it.</p>
+<p>The backdrop to this infastructural work is a world where translating published EHR-driven ML4H models into deployment is hard. Reseachers internationally lament this implementation gap<a class="reference external" href="#fn1"><sup>1</sup></a>. Even at UCLH, flush with a new EHR and live data infrastructure in EMAP, the last mile in pushing a retrospective model requires a lot of one-off project-specific work.</p>
+<p>Intent on doing meaningful research and innovation in a safety critical environment - paving the way for live deployments - deployment needs to be taken more seriously. In particular, the deployment problems that the Hylode platform is looking to address include:</p>
+<ul class="simple">
+<li><p><strong>Risk of train-deploy split</strong>, where discrepency between training and deployment code lower performance</p></li>
+<li><p><strong>Data drift and feature drift</strong>, where underlying shifts in the dataset harm performance unnoticed</p></li>
+<li><p><strong>Ad hoc ongoing model monitoring and evaluation</strong>, where continuous model scrutiny relies on ad hoc batch evaluation</p></li>
+</ul>
+<p>We address these problem by presenting a single framework that:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a) brings together training and deployment in the same modelling workflow
+b) integrates MLOps modules addressing data drift, model evaluation etc. alongside the main platform
+</pre></div>
+</div>
+<p>Rather than ad hoc algorithm deployment, Hylode is a platform for training deployable EHR models.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="case-to-the-ml4h-researcher">
+<h1>Case to the ML4H researcher…<a class="headerlink" href="#case-to-the-ml4h-researcher" title="Permalink to this headline">¶</a></h1>
+<p>Does all this come at the expense of ease and speed for the ML researcher?</p>
+<p>We hope not. Engineered into Hylode are abstractions crafted to make the specific kind of modelling EHR ML practitioners do easier, faster and more joyful.</p>
+<p>In particular:</p>
+<ul class="simple">
+<li><p><strong>Hylode provides a curated set of features</strong> easily interfacing w/ other UCLH data resources such as EMAP &amp; Caboodle. Over time, we hope the store of pre-canned features will grow, cutting the time spent on wrangling, and freeing it up for more modelling work.</p></li>
+<li><p><strong>Built for time-series EHR data</strong> Hylode automates many of the more fiddly elements of training a time-series ML4H model. It eases splitting patient records into temporal slices (the training instances needed to feed time-series EHR models).</p></li>
+<li><p><strong>Ease of experimental logging &amp; model development</strong> The Hylode system makes it easy to log results &amp; create reproducible workflows. The same tooling then makes it straightforward to pass models over from ML teams to application developers, to then present the predictions in a clinically meaningful way.</p></li>
+</ul>
+<p>We see these three strengths as coming together to make Hylode a central resource to develop deployable ML models at UCLH. The core driver here is that Hylode allows researchers to get their modelling done faster.</p>
+<p>From there, the deployment benefits of Hylode kick in. Starting from a single trained model, Hylode offers a seamless technical transition to running models in silent mode, and a clear path to application development and testing the real-time relevance of predictions in complex multi-disciplinary clinical settings.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="the-notebooks">
+<h1>The notebooks…<a class="headerlink" href="#the-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>Background over, we can now get started on the tutorial. The basic structure of these notebooks is as follows:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="vignette_0_intro.html"><span class="doc std std-doc">Notebook 0</span></a> A compact <strong>end-to-end modelling exemplar</strong> evidencing the claims above in c. 20 lines of code.</p></li>
+</ul>
+<p>From there, we switch to a more measured pace. The aim is to give the reader enough grounding to start working with the different system components themselves:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="vignette_1_training_set.html"><span class="doc std std-doc">Notebook 1</span></a> (<strong>HyCastle</strong>) More detail on feature access and preprocessing.</p></li>
+<li><p><a class="reference internal" href="vignette_2_modelling.html"><span class="doc std std-doc">Notebook 2</span></a> (<strong>HyMind</strong>) A fuller end-to-end modelling platform exemplifying how we have been using the platform so far.</p></li>
+<li><p><a class="reference internal" href="vignette_3_data_flow.html"><span class="doc std std-doc">Notebook 3</span></a> (Appendix - <strong>HyFlow &amp; HyGear</strong>) For those interested, a delve under the hood. Here you can start triangulating yourself as to how the data is pulled from EMAP.</p></li>
+</ul>
+<hr class="docutils" />
+<p><span id="fn1">1. Seneviratne, M. G., Shah, N. H. &amp; Chu, L. Bridging the implementation gap of machine learning in healthcare. Bmj Innovations 6, 45 (2020).
+</span></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./20-flowehr"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="HyMind-ML-example.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Imports</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="vignette_0_intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Vignette - end-to-end exemplar</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Steve Harris<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
