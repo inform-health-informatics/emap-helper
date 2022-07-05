@@ -25,5 +25,6 @@ parts:
       chapters:
       - file: 95-Appendices/using-superset
       - file: 95-Appendices/configuring-R-at-UCLH
+      - file: 95-Appendices/tips
 
 

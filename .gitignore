@@ -28,3 +28,6 @@ core.*
 
 # Mac debris
 .DS_Store
+
+# local book deployment
+book/emap/_build/*
