@@ -17,3 +17,22 @@ Advice on working with JupyterBook is available [here](https://jupyterbook.org/i
 
 ## Notes
 - top level directory has a notebooks subdirectory for all Jupyter Notebooks _but_ then sym link the note books into the 'book' directory and the appropriate chapter
+
+## Dev setup
+
+Installing the environment
+
+```sh
+git clonehttps://hylode.github.io/HySchool/ 
+cd HySchool
+conda env create -f dev/environment.yml
+conda activate hyschool
+```
+
+Saving the current environment
+```sh
+conda env export --from-history > dev/environment.yml
+```
+
+Edit the files on your own branch
+Then either push directly (if you have administrator privileges) to the *book* branch or create a pull request

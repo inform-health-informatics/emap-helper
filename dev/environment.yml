@@ -1,0 +1,13 @@
+name: hyschool
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - ghp-import
+  - jupyter-book
+  - python=3.9
+  - matplotlib
+  - xeus-python
+  - pandas
+  - notebook
+prefix: /opt/homebrew/Caskroom/miniforge/base/envs/hyschool
