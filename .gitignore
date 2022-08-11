@@ -10,6 +10,7 @@ scratch.ipynb
 Untitled.ipynb
 labbooks/*
 tmp/*
+log.md
 
 # caches
 *.swp
@@ -30,4 +31,5 @@ core.*
 .DS_Store
 
 # local book deployment
+book/emap/_build/*
 book/emap/_build/*
