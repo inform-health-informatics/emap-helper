@@ -32,4 +32,3 @@ core.*
 
 # local book deployment
 book/emap/_build/*
-book/emap/_build/*
