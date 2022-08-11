@@ -31,4 +31,4 @@ core.*
 .DS_Store
 
 # local book deployment
-book/emap/_build/*
+book/hyschool/_build/*

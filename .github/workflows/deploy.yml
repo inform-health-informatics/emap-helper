@@ -24,16 +24,16 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        pip install -r book/requirements.txt
+        pip install -r hyschool/requirements.txt
 
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build book/emap
+        jupyter-book build book/hyschool
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: book/emap/_build/html
+        publish_dir: book/hyschool/_build/html
