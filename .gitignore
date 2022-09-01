@@ -36,3 +36,4 @@ notebooks/*.csv
 
 # website
 hyschool/_site/*
+*search.json*
