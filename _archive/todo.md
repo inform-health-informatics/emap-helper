@@ -1,1 +1,0 @@
-- [ ] notebooks live in ./notebooks but need to be moved or synced with the appropriate place in the book hierarchy; you could use make or similar to copy all the notebooks into the correct place for the book?
