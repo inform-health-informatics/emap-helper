@@ -4,6 +4,8 @@ I'm not sure how you got here, but whatever happened then '_Welcome_'.
 
 We assume that you're here because you are going to start work with our data science team. This **readme.md** file will set-out some pre-requisites, and series of short lessons. Your first task will be to learn how to use GitHub for collaboration.
 
+If you're trying explain to someone else how to get here then go to the [**'noobie'** branch](https://github.com/HYLODE/HySchool/tree/noobie) of the [HySchool repository](https://github.com/HYLODE/HySchool). 
+
 ## Aim
 
 You are going to create your user own user page, and publish that to the HySchool website.
@@ -30,3 +32,11 @@ If this is already all new to you then
 1. Set-up `<-- you are here`
 2. Install Quarto (our documentation and website system)
 3. Write and publish your first page
+
+Please note that this **readme.md** file will change as we progress through the lessons. You will need to come back here after each step.
+
+# Lesson 1
+
+Given the pre-requisites above then you need to clone this repository to your local machine. We're going to assume you're using GitHub desktop where you will need to select the **File > Clone Repository...** menu, and then the **URL** tab of the dialog box. Paste the URL of the repository (https://github.com/HYLODE/HySchool) into the first text field, and then choose a local path (on your machine) to store your work.  
+
+![](github-desktop-clone-dialog.png)
